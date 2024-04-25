@@ -7,6 +7,15 @@ returns a pascal trinagle of size  n
 
 
 def pascal_triangle(n):
+    """
+    A function that returns a pascal triangle
+
+    Args:
+        n(int): number of rows
+    Return:
+        A list of lists representing the pascal trinagle
+    """
+
     if n <= 0:
         return []
 
