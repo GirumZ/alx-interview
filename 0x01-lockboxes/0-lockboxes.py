@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Given n number of locked boxes, where each box is numbered sequentialy
 from 0 to n-1 and each box containing keys to the other boxes, the
@@ -12,6 +13,9 @@ def canUnlockAll(boxes):
         Returns:
             True if all boxes can be opend and false if not
     """
+
+    if not boxes or type(boxes) is not list:
+        return False
 
     num_boxes = len(boxes)
     checked = [False] * num_boxes
