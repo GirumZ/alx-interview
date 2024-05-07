@@ -5,7 +5,7 @@ needed to get n number of 'H's in a file
 """
 
 
-def minOperations(n):
+def minOperations(n) -> int:
     """A python function that calculate the minimum amount of operation
     needed to get n number of 'H's in a file
     Args:
