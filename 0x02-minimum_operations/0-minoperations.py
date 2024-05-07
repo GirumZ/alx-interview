@@ -13,7 +13,7 @@ def minOperations(n):
     Returns:
         The total operations needed
     """
-    if n == 1:
+    if n < 2:
         return 0
 
     dp = [0] * (n + 1)
