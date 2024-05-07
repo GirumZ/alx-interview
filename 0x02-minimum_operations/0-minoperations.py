@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 A python function that calculate the minimum amount of operation
 needed to get n number of 'H's in a file
