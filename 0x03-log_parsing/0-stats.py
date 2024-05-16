@@ -70,8 +70,4 @@ try:
         if line_count % 10 == 0:
             print_stats(total_file_size, status_codes)
 except KeyboardInterrupt:
-    try:
         print_stats(total_file_size, status_codes)
-    except KeyboardInterrupt:
-        pass
-    raise
