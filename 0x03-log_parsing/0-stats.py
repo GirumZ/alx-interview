@@ -51,7 +51,6 @@ def print_stats(size: int, status_codes: dict):
 try:
     for line in sys.stdin:
         line_count += 1
-        line.strip()
         parts = line.split()
         parts[2:4] = [' '.join(parts[2:4])]
         if not check_format(parts):
@@ -70,5 +69,5 @@ try:
         if line_count % 10 == 0:
             print_stats(total_file_size, status_codes)
 except KeyboardInterrupt:
-        print_stats(total_file_size, status_codes)
-        raise
+    print_stats(total_file_size, status_codes)
+    raise
