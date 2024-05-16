@@ -39,13 +39,13 @@ def check_format(mylist: list) -> bool:
         return False
 
 
-def print_stats(size: int, status_codes: dict):
+def print_stats(size: int, status_codes: dict) -> None:
     """ prints the required stats"""
 
     print(f"File size: {size}")
     for status_code in status_codes:
         if status_codes[status_code] != 0:
-            print(f"{status_code}: {status_codes[status_code]}")
+            print("{}: {:d}".format(status_code, status_codes[status_code]))
 
 
 try:
