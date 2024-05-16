@@ -71,3 +71,4 @@ try:
             print_stats(total_file_size, status_codes)
 except KeyboardInterrupt:
         print_stats(total_file_size, status_codes)
+        raise
