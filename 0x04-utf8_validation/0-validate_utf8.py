@@ -29,11 +29,11 @@ def validUTF8(data):
 
         if i + num_bytes > len(data):
             return False
-        
+
         for j in range(1, num_bytes):
             if (data[i + j] & continuation_mask) != 0b10000000:
                 return False
 
         i += num_bytes
 
-    return True    
+    return True
