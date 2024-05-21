@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ A python module for utf-8 validation"""
+
 
 def validUTF8(data):
     """ method for utf-8 validation"""
