@@ -11,23 +11,26 @@ def isWinner(x, nums):
         The winner between Maria and Ben
     """
 
-    maria_wins = 0
-    ben_wins = 0
-    n = max(nums)
-
-    for _ in range(x):
+    def sieve(n):
         is_prime = [True] * (n + 1)
         is_prime[0] = is_prime[1] = False
-
-        for num in nums:
-            if is_prime[num]:
-                for i in range(num, n + 1, num):
+        for p in range(2, int(n ** 0.5) + 1):
+            if is_prime[p]:
+                for i in range(p * p, n + 1, p):
                     is_prime[i] = False
-                maria_wins += 1
-                break
-        else:
+        return is_prime
+    n = max(nums) if nums else 0
+    is_prime = sieve(n)
+
+    maria_wins = 0
+    ben_wins = 0
+
+    for n in nums:
+        p_count = sum(is_prime[2:n + 1])
+        if p_count % 2 == 0:
             ben_wins += 1
-            continue
+        else:
+            maria_wins += 1
 
     if maria_wins > ben_wins:
         return "Maria"
