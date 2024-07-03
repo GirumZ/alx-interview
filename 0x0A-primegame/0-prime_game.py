@@ -11,6 +11,11 @@ def isWinner(x, nums):
         The winner between Maria and Ben
     """
 
+    if x <= 0 or nums is None:
+        return None
+    if x != len(nums):
+        return None
+
     def sieve(n):
         is_prime = [True] * (n + 1)
         is_prime[0] = is_prime[1] = False
